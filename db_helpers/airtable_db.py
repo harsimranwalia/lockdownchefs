@@ -1,9 +1,8 @@
 import json
 from airtable import airtable
+from config import AIRTABLE_API_KEY, AIRTABLE_BASE_ID
 
-api_key = "key091MLeo2IGsbDh" # account api key
-base_id = "appXbRWUGQurMQ88E" # db base (lockdownchefs)
-at = airtable.Airtable(base_id, api_key)
+at = airtable.Airtable(AIRTABLE_BASE_ID, AIRTABLE_API_KEY)
 
 def create_filter_formula(filters=None, logical="OR"):
     filter_str = logical + "("

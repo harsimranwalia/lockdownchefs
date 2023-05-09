@@ -2,6 +2,7 @@ import smtplib
 import email.utils
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from .config import AWS
 
 # The email body for recipients with non-HTML email clients.
 BODY_TEXT = ("Amazon SES Test\r\n"
@@ -21,12 +22,7 @@ BODY_HTML = """<html>
 </body>
 </html>
             """
-AWS = {
-    "smtp_host" : "email-smtp.ap-south-1.amazonaws.com",
-	"smtp_port" : 587,
-	"smtp_user" : "AKIARPQCHHYEUHJ73VMK",
-	"smtp_pass" : "BNQjj1Zg7JDHuEr7llRUaCs30CAg/ZQKMBrNv8Kdm4kC"
-}
+
 
 
 def send_email(recipient, subject, body_text="", body_html="", sender="recipe@skillbeyond.com", sendername="Lockdown Chefs"):
