@@ -1,0 +1,14 @@
+# Mac files
+.DS_Store
+
+# Config files with credentials
+config.py
+db_helpers/dbconfig.py
+mailchimp/config.py
+helpers/constants.py
+
+# Cache files
+**__pycache__
+
+
+
